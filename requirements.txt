@@ -1,0 +1,4 @@
+pandas
+prompt_toolkit
+colorama
+tqdm
