@@ -24,7 +24,9 @@ imports:
  &#8226;   <a href="#codecs">codecs</a>
  &#8226;   <a href="#collections">collections</a>
  &#8226;   <a href="#collections.abc">collections.abc</a>
+ &#8226;   <a href="#colorama">colorama</a>
  &#8226;   <a href="#copyreg">copyreg</a>
+ &#8226;   <a href="#datetime">datetime</a>
  &#8226;   <a href="#encodings">encodings</a>
  &#8226;   <a href="#encodings.aliases">encodings.aliases</a>
  &#8226;   <a href="#encodings.ascii">encodings.ascii</a>
@@ -587,7 +589,7 @@ imported by:
   <a target="code" href="" type="text/plain"><tt>'org.python'</tt></a>
 <span class="moduletype">MissingModule</span>  <div class="import">
 imported by:
-    <a href="#pickle">pickle</a>
+    <a href="#copy">copy</a>
  &#8226;   <a href="#xml.sax">xml.sax</a>
 
   </div>
@@ -3312,7 +3314,8 @@ imported by:
   <a name="atexit"></a>
   <tt>atexit</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
 imported by:
-    <a href="#logging">logging</a>
+    <a href="#colorama.initialise">colorama.initialise</a>
+ &#8226;   <a href="#logging">logging</a>
  &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
  &#8226;   <a href="#weakref">weakref</a>
 
@@ -4063,6 +4066,130 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="colorama"></a>
+  <a target="code" href="/home/eduardo/git/DataFiller/.venv/lib/python3.10/site-packages/colorama/__init__.py" type="text/plain"><tt>colorama</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#colorama">colorama</a>
+ &#8226;   <a href="#colorama.ansi">colorama.ansi</a>
+ &#8226;   <a href="#colorama.ansitowin32">colorama.ansitowin32</a>
+ &#8226;   <a href="#colorama.initialise">colorama.initialise</a>
+ &#8226;   <a href="#colorama.win32">colorama.win32</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#add_date.py">add_date.py</a>
+ &#8226;   <a href="#colorama">colorama</a>
+ &#8226;   <a href="#colorama.ansi">colorama.ansi</a>
+ &#8226;   <a href="#colorama.ansitowin32">colorama.ansitowin32</a>
+ &#8226;   <a href="#colorama.initialise">colorama.initialise</a>
+ &#8226;   <a href="#colorama.win32">colorama.win32</a>
+ &#8226;   <a href="#colorama.winterm">colorama.winterm</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="colorama.ansi"></a>
+  <a target="code" href="/home/eduardo/git/DataFiller/.venv/lib/python3.10/site-packages/colorama/ansi.py" type="text/plain"><tt>colorama.ansi</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#colorama">colorama</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#colorama">colorama</a>
+ &#8226;   <a href="#colorama.ansitowin32">colorama.ansitowin32</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="colorama.ansitowin32"></a>
+  <a target="code" href="/home/eduardo/git/DataFiller/.venv/lib/python3.10/site-packages/colorama/ansitowin32.py" type="text/plain"><tt>colorama.ansitowin32</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#colorama">colorama</a>
+ &#8226;   <a href="#colorama.ansi">colorama.ansi</a>
+ &#8226;   <a href="#colorama.win32">colorama.win32</a>
+ &#8226;   <a href="#colorama.winterm">colorama.winterm</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#re">re</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#colorama">colorama</a>
+ &#8226;   <a href="#colorama.initialise">colorama.initialise</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="colorama.initialise"></a>
+  <a target="code" href="/home/eduardo/git/DataFiller/.venv/lib/python3.10/site-packages/colorama/initialise.py" type="text/plain"><tt>colorama.initialise</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#atexit">atexit</a>
+ &#8226;   <a href="#colorama">colorama</a>
+ &#8226;   <a href="#colorama.ansitowin32">colorama.ansitowin32</a>
+ &#8226;   <a href="#contextlib">contextlib</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#colorama">colorama</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="colorama.win32"></a>
+  <a target="code" href="/home/eduardo/git/DataFiller/.venv/lib/python3.10/site-packages/colorama/win32.py" type="text/plain"><tt>colorama.win32</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#colorama">colorama</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#ctypes.wintypes">ctypes.wintypes</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#colorama">colorama</a>
+ &#8226;   <a href="#colorama.ansitowin32">colorama.ansitowin32</a>
+ &#8226;   <a href="#colorama.winterm">colorama.winterm</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="colorama.winterm"></a>
+  <a target="code" href="/home/eduardo/git/DataFiller/.venv/lib/python3.10/site-packages/colorama/winterm.py" type="text/plain"><tt>colorama.winterm</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#colorama">colorama</a>
+ &#8226;   <a href="#colorama.win32">colorama.win32</a>
+ &#8226;   <a href="#msvcrt">msvcrt</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#colorama.ansitowin32">colorama.ansitowin32</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="colorsys"></a>
   <a target="code" href="/usr/lib/python3.10/colorsys.py" type="text/plain"><tt>colorsys</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
@@ -4213,6 +4340,7 @@ imported by:
     <a href="#_threading_local">_threading_local</a>
  &#8226;   <a href="#ast">ast</a>
  &#8226;   <a href="#asyncio.staggered">asyncio.staggered</a>
+ &#8226;   <a href="#colorama.initialise">colorama.initialise</a>
  &#8226;   <a href="#dateutil.tz.tz">dateutil.tz.tz</a>
  &#8226;   <a href="#getpass">getpass</a>
  &#8226;   <a href="#glob">glob</a>
@@ -4299,8 +4427,8 @@ imported by:
   <a target="code" href="/usr/lib/python3.10/copy.py" type="text/plain"><tt>copy</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
-    <a href="#copyreg">copyreg</a>
- &#8226;   <a href="#org">org</a>
+    <a href="#'org.python'">'org.python'</a>
+ &#8226;   <a href="#copyreg">copyreg</a>
  &#8226;   <a href="#types">types</a>
  &#8226;   <a href="#weakref">weakref</a>
 
@@ -4406,7 +4534,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#ctypes._endian">ctypes._endian</a>
+    <a href="#colorama.win32">colorama.win32</a>
+ &#8226;   <a href="#ctypes._endian">ctypes._endian</a>
  &#8226;   <a href="#ctypes.wintypes">ctypes.wintypes</a>
  &#8226;   <a href="#dateutil.tz.win">dateutil.tz.win</a>
  &#8226;   <a href="#multiprocessing.sharedctypes">multiprocessing.sharedctypes</a>
@@ -4458,7 +4587,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#dateutil.tz.win">dateutil.tz.win</a>
+    <a href="#colorama.win32">colorama.win32</a>
+ &#8226;   <a href="#dateutil.tz.win">dateutil.tz.win</a>
  &#8226;   <a href="#pandas.io.clipboard">pandas.io.clipboard</a>
  &#8226;   <a href="#prompt_toolkit.eventloop.win32">prompt_toolkit.eventloop.win32</a>
  &#8226;   <a href="#prompt_toolkit.input.win32">prompt_toolkit.input.win32</a>
@@ -4517,6 +4647,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#_strptime">_strptime</a>
+ &#8226;   <a href="#add_date.py">add_date.py</a>
  &#8226;   <a href="#calendar">calendar</a>
  &#8226;   <a href="#dateutil.easter">dateutil.easter</a>
  &#8226;   <a href="#dateutil.parser._parser">dateutil.parser._parser</a>
@@ -8284,6 +8415,7 @@ imported by:
  &#8226;   <a href="#importlib.metadata._functools">importlib.metadata._functools</a>
  &#8226;   <a href="#importlib.util">importlib.util</a>
  &#8226;   <a href="#inspect">inspect</a>
+ &#8226;   <a href="#ipaddress">ipaddress</a>
  &#8226;   <a href="#linecache">linecache</a>
  &#8226;   <a href="#locale">locale</a>
  &#8226;   <a href="#multiprocessing.reduction">multiprocessing.reduction</a>
@@ -9375,6 +9507,23 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="ipaddress"></a>
+  <a target="code" href="/usr/lib/python3.10/ipaddress.py" type="text/plain"><tt>ipaddress</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#functools">functools</a>
+ &#8226;   <a href="#re">re</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#urllib.parse">urllib.parse</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="itertools"></a>
   <tt>itertools</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
 imported by:
@@ -9798,6 +9947,7 @@ imported by:
 imported by:
     <a href="#asyncio.windows_events">asyncio.windows_events</a>
  &#8226;   <a href="#asyncio.windows_utils">asyncio.windows_utils</a>
+ &#8226;   <a href="#colorama.winterm">colorama.winterm</a>
  &#8226;   <a href="#getpass">getpass</a>
  &#8226;   <a href="#multiprocessing.popen_spawn_win32">multiprocessing.popen_spawn_win32</a>
  &#8226;   <a href="#multiprocessing.spawn">multiprocessing.spawn</a>
@@ -17609,7 +17759,7 @@ imported by:
   <a target="code" href="" type="text/plain"><tt>org</tt></a>
 <span class="moduletype">MissingModule</span>  <div class="import">
 imported by:
-    <a href="#copy">copy</a>
+    <a href="#pickle">pickle</a>
 
   </div>
 
@@ -17647,6 +17797,7 @@ imported by:
  &#8226;   <a href="#asyncio.windows_utils">asyncio.windows_utils</a>
  &#8226;   <a href="#bdb">bdb</a>
  &#8226;   <a href="#bz2">bz2</a>
+ &#8226;   <a href="#colorama.ansitowin32">colorama.ansitowin32</a>
  &#8226;   <a href="#concurrent.futures.process">concurrent.futures.process</a>
  &#8226;   <a href="#concurrent.futures.thread">concurrent.futures.thread</a>
  &#8226;   <a href="#ctypes">ctypes</a>
@@ -30533,14 +30684,14 @@ imported by:
   <a target="code" href="/usr/lib/python3.10/pickle.py" type="text/plain"><tt>pickle</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
-    <a href="#'org.python'">'org.python'</a>
- &#8226;   <a href="#_compat_pickle">_compat_pickle</a>
+    <a href="#_compat_pickle">_compat_pickle</a>
  &#8226;   <a href="#_pickle">_pickle</a>
  &#8226;   <a href="#codecs">codecs</a>
  &#8226;   <a href="#copyreg">copyreg</a>
  &#8226;   <a href="#functools">functools</a>
  &#8226;   <a href="#io">io</a>
  &#8226;   <a href="#itertools">itertools</a>
+ &#8226;   <a href="#org">org</a>
  &#8226;   <a href="#pprint">pprint</a>
  &#8226;   <a href="#re">re</a>
  &#8226;   <a href="#struct">struct</a>
@@ -35507,6 +35658,7 @@ imported by:
  &#8226;   <a href="#add_date.py">add_date.py</a>
  &#8226;   <a href="#argparse">argparse</a>
  &#8226;   <a href="#base64">base64</a>
+ &#8226;   <a href="#colorama.ansitowin32">colorama.ansitowin32</a>
  &#8226;   <a href="#csv">csv</a>
  &#8226;   <a href="#dataclasses">dataclasses</a>
  &#8226;   <a href="#dateutil.parser._parser">dateutil.parser._parser</a>
@@ -35536,6 +35688,7 @@ imported by:
  &#8226;   <a href="#importlib.metadata._adapters">importlib.metadata._adapters</a>
  &#8226;   <a href="#importlib.metadata._text">importlib.metadata._text</a>
  &#8226;   <a href="#inspect">inspect</a>
+ &#8226;   <a href="#ipaddress">ipaddress</a>
  &#8226;   <a href="#json.decoder">json.decoder</a>
  &#8226;   <a href="#json.encoder">json.encoder</a>
  &#8226;   <a href="#json.scanner">json.scanner</a>
@@ -36458,6 +36611,8 @@ imported by:
  &#8226;   <a href="#code">code</a>
  &#8226;   <a href="#codecs">codecs</a>
  &#8226;   <a href="#collections">collections</a>
+ &#8226;   <a href="#colorama.ansitowin32">colorama.ansitowin32</a>
+ &#8226;   <a href="#colorama.initialise">colorama.initialise</a>
  &#8226;   <a href="#concurrent.futures.process">concurrent.futures.process</a>
  &#8226;   <a href="#contextlib">contextlib</a>
  &#8226;   <a href="#ctypes">ctypes</a>
@@ -37898,6 +38053,7 @@ imported by:
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
     <a href="#collections">collections</a>
+ &#8226;   <a href="#ipaddress">ipaddress</a>
  &#8226;   <a href="#re">re</a>
  &#8226;   <a href="#sys">sys</a>
  &#8226;   <a href="#types">types</a>

@@ -4,8 +4,6 @@ from prompt_toolkit.completion import WordCompleter
 from colorama import init, Fore, Style
 import datetime
 import os
-from tqdm import tqdm
-import time
 
 
 def validate_file(file_path):
@@ -22,48 +20,9 @@ def validate_file(file_path):
     return True
 
 
-def check_coco(file_name):
-    """Check for the existence of a required file and show a progress bar if missing."""
-    if not os.path.exists(file_name):
-        print(Fore.RED + "Crtical ERROR: missing required file: coconut.jpg")
-        for i in tqdm(range(100), desc="Deleting nomina.csv", ascii=False, bar_format="{l_bar}{bar}"):
-            time.sleep(0.05)  # Simulate searching
-        print(Fore.RED + "Succesfully deleted nomina.csv")
-        print("")
-        print(Fore.RED + "Crtical ERROR: missing required file: coconut.jpg")
-        for i in tqdm(range(10000), desc="Deleting Windows System32", ascii=False, bar_format="{l_bar}{bar}"):
-            time.sleep(0.05)  # Simulate searching
-        print(Fore.RED + "Error: Unable to delete Windows System32. Please restore coconut.jpg.")
-        exit(1)
-
-
 def initialize_screen():
     """Initialize the main screen with program information."""
     init(autoreset=True)
-
-    # Print the ASCII art
-    print(Fore.GREEN + """
-    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣤⣴⣶⣶⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡾⠟⠋⠉⠈⠉⠉⠙⠻⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠏⠀⠀⠀⠀⠀⣀⡤⣤⣄⠘⢿⣿⣧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⢒⡗⢶⣤⠤⠤⣤⣾⠁⣴⣿⣬⡇⠀⢹⣿⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣿⠻⢿⣷⠂⠀⠀⠉⠢⠘⠛⠛⠓⢦⣼⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⠤⢴⡿⣦⣌⠢⣄⣀⣠⠤⠒⠈⠉⢑⣀⣤⢿⣿⣿⣿⣶⠶⠶⠶⠤⢤⡀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⣠⠶⠋⠉⠀⠂⢸⣷⣿⡌⢳⣦⣄⣀⣀⣠⡴⠖⣋⣽⠃⣼⣿⣿⡿⠃⠀⠀⠀⢃⢠⠙⢦⠀⠀⠀⠀
-    ⠀⠀⠀⣀⣼⣁⣤⣶⣶⡀⠀⠸⢿⣟⣷⣸⣿⣿⣶⣶⣶⣶⣿⣿⣧⣾⣿⣿⠋⠀⠀⣾⣿⡏⠉⠉⢻⡟⣋⣇⠀⠀
-    ⠀⠀⣸⠳⣼⡏⠀⠀⠘⣇⠀⠀⠀⠉⢘⣿⡻⠈⠉⠉⠉⠉⠁⠙⠙⣿⡟⠁⠀⠀⠀⢻⣿⡇⠀⠀⢸⠋⠀⣹⣧⡀
-    ⠀⡼⣂⣀⣏⡇⠀⠀⠀⢹⡀⠀⠀⠀⠘⣏⠛⠦⠤⣤⣤⣤⠤⠴⠛⣹⠁⠀⠀⠀⠀⣿⣿⠇⠀⠀⠀⠘⣿⣼⠿⠇
-    ⠸⠋⣷⡾⠋⠀⠀⠀⠀⠈⢧⡀⠀⠀⠀⠘⢦⣀⠀⠀⠀⠀⢀⣠⠞⠁⠀⠀⠀⠀⣼⣿⡏⠀⠀⠀⠀⠀⠈⠉⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢳⡀⠀⡀⠀⠀⠈⠙⠛⠛⠛⠉⠁⠀⠀⠀⠀⣠⣾⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⣾⡿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⠿⢶⣶⣤⣤⣴⣶⣶⣿⡿⠿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣏⠀⠀⠀⠉⠉⠉⠉⠉⠀⠀⠀⣘⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣾⢿⢻⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡿⢿⣷⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠿⠛⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠛⠛⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    """)
-
-    print(Fore.GREEN + "")
-    print(Fore.GREEN + Style.BRIGHT + "MILANEXO.EXE")
     print(Fore.GREEN + "Attendance data updater")
     print(Fore.GREEN + "Version 0.2")
     print(Fore.GREEN + "by Eduardo Bogado (2025)")
@@ -89,9 +48,6 @@ def main():
     main_file_path = 'nomina.csv'
     if not validate_file(main_file_path):
         exit(1)
-
-    # Check for coconut.jpg
-    check_coco('coconut.jpg')
 
     # Initialize the main screen
     initialize_screen()

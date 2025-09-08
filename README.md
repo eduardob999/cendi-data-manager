@@ -1,3 +1,5 @@
+# Deploy instructions
+
 1. **Install PyInstaller**:
    ```sh
    pip install pyinstaller
@@ -25,9 +27,7 @@
  file and the executable (`add_date` or `add_date.exe` on Windows) from the `dist` directory to a folder.
    - Instruct the user to run the executable by double-clicking it (on Windows) or running it from the terminal (on Linux/Mac).
 
-6. **Instructions for the user**:
+# **Instructions for the user**:
    - Place the nomina.csv file in the same directory as the executable.
    - Run the executable by double-clicking it (on Windows) or using the terminal (on Linux/Mac).
    - Follow the prompts to enter the date and `CÉDULA` values.
-
-This approach ensures that the user does not need to install Python or any dependencies manually. The executable will include everything needed to run the script.
