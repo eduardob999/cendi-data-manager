@@ -22,8 +22,8 @@ import argparse
 
 
 # ── Config ────────────────────────────────────────────────────────
-SCRIPT = "attendance.py"
-APP_NAME = "attendance"
+SCRIPT = "add_date.py"
+APP_NAME = "CENDIS"
 ICON_WIN = None   # set to "icon.ico" if you have one
 ICON_MAC = None   # set to "icon.icns" if you have one
 
